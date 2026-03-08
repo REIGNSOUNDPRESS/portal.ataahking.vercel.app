@@ -34,4 +34,3 @@ This development includes the use of the following technologies:
 > GitHub®
 
 CTA: Learn More: https://portal.ataahking.vercel.app/info
-CTA: Learn More: https://portal.ataahking.vercel.app/info
