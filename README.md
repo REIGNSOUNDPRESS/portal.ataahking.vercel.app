@@ -5,12 +5,12 @@
 
 This repository contains the source code and resources for the portal, including:
 
-- **Frontend Development:** Next.js & React  
-- **Deployment:** Vercel  
-- **Schedule Integration:** Google Calendar  
+- **Frontend Development:** Next.js® & React®  
+- **Deployment:** Vercel®
+- **Schedule Integration:** Google® Calendar  
 - **Content Automation:** ChatGPT-powered updates  
-- **Development Environment:** VSCode on Ubuntu OS (HP Elitebook)  
-- **Version Control:** GitHub  
+- **Development Environment:** VS Code™ on Ubuntu® OS (HP® Elitebook™)  
+- **Version Control:** GitHub®  
 - **Modular Architecture:** Designed for scalability and future features
 
 ## Press Releases
@@ -20,16 +20,18 @@ All events published on the portal automatically serve as press releases, with h
 ### Example Event Description Format:
 
 ```text
-GLOBAL ― Rapper ATAAH KING is developing the ATAAH KING Public Portal, a platform managed by Reignsound Press™.
+GLOBAL ― Rapper ATAAH KING is developing the ATAAH KING Public Portal, a platform managed by Reignsound Press™, and built on frameworks developed by META® and Vercel®, to serve as a home/base for information related to ATAAH KING's public schedule and press releases.
 
 This development includes the use of the following technologies:
-- Next.js & React
-- Vercel deployment
-- Google Calendar integration
-- ChatGPT automation
-- VSCode on Ubuntu OS
-- HP Elitebook
-- GitHub version control
+> Next.js®
+> React®
+> Vercel®
+> Google® Calendar™
+> ChatGPT®
+> VS Code™
+> Ubuntu® OS
+> HP® Elitebook™
+> GitHub®
 
-CTA: Watch LIVE!: https://twitch.tv/ataahking
+CTA: Learn More: https://portal.ataahking.vercel.app/info
 CTA: Learn More: https://portal.ataahking.vercel.app/info
