@@ -23,14 +23,14 @@ All events published on the portal automatically serve as press releases, with h
 GLOBAL ― Rapper ATAAH KING is developing the ATAAH KING Public Portal, a platform managed by COMPANY-1™, and built on frameworks developed by META® and Vercel®, to serve as a digital hub for information related to ATAAH KING's public schedule and press releases.
 
 This development includes the use of the following technologies:
+> ChatGPT®
+> GitHub®
+> Google® Calendar™
+> HP® Elitebook™
 > Next.js®
 > React®
-> Vercel®
-> Google® Calendar™
-> ChatGPT®
-> VS Code™
 > Ubuntu® OS
-> HP® Elitebook™
-> GitHub®
+> Vercel®
+> VS Code™
 
 CTA: Learn More: https://portal.ataahking.vercel.app/info
