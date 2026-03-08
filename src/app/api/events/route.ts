@@ -1,13 +1,40 @@
-// src/app/api/events/route.ts
 import { NextResponse } from 'next/server';
-import { getUpcomingEvents } from '@/lib/calendar';
+
+const CALENDAR_ID = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_ID!;
+const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY!;
 
 export async function GET() {
   try {
-    const events = await getUpcomingEvents();
-    return NextResponse.json(events);
-  } catch (err) {
-    console.error(err);
-    return NextResponse.json({ error: 'Failed to fetch calendar events' }, { status: 500 });
+    const now = new Date();
+    const timeMin = now.toISOString();
+    const timeMax = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000).toISOString();
+
+    const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(
+      CALENDAR_ID
+    )}/events?key=${API_KEY}&timeMin=${timeMin}&timeMax=${timeMax}&orderBy=startTime&singleEvents=true&maxResults=10`;
+
+    const res = await fetch(url);
+
+    if (!res.ok) {
+      throw new Error(`Google API error: ${res.status}`);
+    }
+
+    const data = await res.json();
+
+    const events = (data.items || []).map((e: any) => ({
+      id: e.id,
+      summary: e.summary,
+      start: e.start.dateTime || e.start.date,
+      end: e.end.dateTime || e.end.date,
+      description: e.description || '',
+      location: e.location || ''
+    }));
+
+    return NextResponse.json(events.slice(0, 3));
+  } catch (err: any) {
+    return NextResponse.json(
+      { error: err.message },
+      { status: 500 }
+    );
   }
 }
