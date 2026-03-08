@@ -1,36 +1,36 @@
-## portal.ataahking.vercel.app
-# ATAAH KING Public Portal
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-**GLOBAL ―** COMPANY-1™, d/b/a Reignsound Press™, has developed a digital hub for rapper ATAAH KING, known as the official ATAAH KING Public Portal (https://portal.ataahking.vercel.app), serving as a centralized hub providing fans, journalists, and collaborators with real-time access to ATAAH KING's public schedule, press releases, and official announcements.
+## Getting Started
 
-This repository contains the source code and resources for the portal, including:
+First, run the development server:
 
-- **Frontend Development:** Next.js® & React®  
-- **Deployment:** Vercel®
-- **Schedule Integration:** Google® Calendar  
-- **Content Automation:** ChatGPT-powered updates  
-- **Development Environment:** VS Code™ on Ubuntu® OS (HP® Elitebook™)  
-- **Version Control:** GitHub®  
-- **Modular Architecture:** Designed for scalability and future features
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Press Releases
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-All events published on the portal automatically serve as press releases, with headlines, descriptions, and CTAs parsed directly from event data.  
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### Example Event Description Format:
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-```text
-GLOBAL ― Rapper ATAAH KING is developing the ATAAH KING Public Portal, a platform managed by COMPANY-1™, and built on frameworks developed by META® and Vercel®, to serve as a digital hub for information related to ATAAH KING's public schedule and press releases.
+## Learn More
 
-This development includes the use of the following technologies:
-> ChatGPT®
-> GitHub®
-> Google® Calendar™
-> HP® Elitebook™
-> Next.js®
-> React®
-> Ubuntu® OS
-> Vercel®
-> VS Code™
+To learn more about Next.js, take a look at the following resources:
 
-CTA: Learn More: https://portal.ataahking.vercel.app/info
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
