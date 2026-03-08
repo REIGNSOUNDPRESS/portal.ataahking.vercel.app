@@ -1,7 +1,7 @@
 ## portal.ataahking.vercel.app
 # ATAAH KING Public Portal
 
-**GLOBAL ―** Reignsound Press™ has developed the official Public Portal for rapper ATAAH KING Public Portal (https://portal.ataahking.vercel.app), a centralized platform providing fans, journalists, and collaborators with real-time access to ATAAH KING's public schedule, press releases, and official announcements.
+**GLOBAL ―** Reignsound Press™ has developed a digital hub for rapper ATAAH KING, known as the official ATAAH KING Public Portal (https://portal.ataahking.vercel.app), serving as a centralized hub providing fans, journalists, and collaborators with real-time access to ATAAH KING's public schedule, press releases, and official announcements.
 
 This repository contains the source code and resources for the portal, including:
 
