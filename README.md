@@ -1,7 +1,7 @@
 ## portal.ataahking.vercel.app
 # ATAAH KING Public Portal
 
-**GLOBAL ―** Reignsound Press™ has developed a digital hub for rapper ATAAH KING, known as the official ATAAH KING Public Portal (https://portal.ataahking.vercel.app), serving as a centralized hub providing fans, journalists, and collaborators with real-time access to ATAAH KING's public schedule, press releases, and official announcements.
+**GLOBAL ―** COMPANY-1™, d/b/a Reignsound Press™, has developed a digital hub for rapper ATAAH KING, known as the official ATAAH KING Public Portal (https://portal.ataahking.vercel.app), serving as a centralized hub providing fans, journalists, and collaborators with real-time access to ATAAH KING's public schedule, press releases, and official announcements.
 
 This repository contains the source code and resources for the portal, including:
 
@@ -20,7 +20,7 @@ All events published on the portal automatically serve as press releases, with h
 ### Example Event Description Format:
 
 ```text
-GLOBAL ― Rapper ATAAH KING is developing the ATAAH KING Public Portal, a platform managed by Reignsound Press™, and built on frameworks developed by META® and Vercel®, to serve as a digital hub for information related to ATAAH KING's public schedule and press releases.
+GLOBAL ― Rapper ATAAH KING is developing the ATAAH KING Public Portal, a platform managed by COMPANY-1™, and built on frameworks developed by META® and Vercel®, to serve as a digital hub for information related to ATAAH KING's public schedule and press releases.
 
 This development includes the use of the following technologies:
 > Next.js®
