@@ -31,7 +31,6 @@ export default function ScheduleSection() {
         if (!res.ok) throw new Error('Failed to fetch calendar events')
         const data = await res.json()
 
-        // Parse description for CTAs
         const parsed = data.map((e: Event) => {
           const lines = e.description?.split('\n') || []
           const textLines: string[] = []
@@ -68,12 +67,11 @@ export default function ScheduleSection() {
   }, [])
 
   if (loading)
-    return <p className="text-gray-400">Loading schedule...</p>
+    return <p className="text-gray-500">Loading schedule...</p>
   if (error) return <p className="text-red-500">{error}</p>
   if (!events.length)
-    return <p className="text-gray-400">No events scheduled.</p>
+    return <p className="text-gray-500">No events scheduled.</p>
 
-  // Show Today + next 2 events
   const now = new Date()
   const upcoming = events
     .filter((e) => new Date(e.end) >= now)
@@ -84,53 +82,58 @@ export default function ScheduleSection() {
     .slice(0, 3)
 
   return (
-    <section className="mt-8">
-      <h2 className="text-2xl font-bold mb-4 text-white">
-        Today's Public Schedule
-      </h2>
+    <section className="mt-8 bg-black text-white px-6 py-6 rounded-lg">
+      <h2 className="text-3xl font-bold mb-6">Today's Public Schedule</h2>
+
       <ul className="space-y-4">
         {upcoming.map((event) => (
           <li
             key={event.id}
-            className="border border-neutral-800 p-4 rounded-md hover:bg-gray-900 cursor-pointer transition"
+            className="grid grid-cols-[120px_1fr] gap-4 border border-gray-800 p-4 rounded-md hover:bg-gray-900 cursor-pointer transition"
             onClick={() => setSelectedEvent(event)}
           >
-            <p className="text-gray-400 text-sm">
+            {/* Time Column */}
+            <div className="text-gray-400 text-sm font-mono">
               {new Date(event.start).toLocaleTimeString([], {
                 hour: '2-digit',
                 minute: '2-digit',
-              })}{' '}
-              -{' '}
+              })}
+              <br />
               {new Date(event.end).toLocaleTimeString([], {
                 hour: '2-digit',
                 minute: '2-digit',
               })}
-            </p>
-            <h3 className="text-xl font-semibold text-white">
-              {event.title}
-            </h3>
+            </div>
+
+            {/* Event Column */}
+            <div>
+              <h3 className="text-xl font-semibold">{event.title}</h3>
+              <p className="text-gray-300 mt-1 line-clamp-3">
+                {event.description}
+              </p>
+            </div>
           </li>
         ))}
       </ul>
 
-      {/* Modal for event details */}
+      {/* Event Modal */}
       {selectedEvent && (
-        <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-start pt-20 z-50">
-          <div className="bg-black border border-neutral-800 rounded-lg p-6 w-11/12 max-w-2xl relative">
+        <div className="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-start pt-16 z-50">
+          <div className="bg-black border border-gray-700 rounded-lg p-6 w-11/12 max-w-3xl relative">
             <button
               className="absolute top-2 right-2 text-gray-400 hover:text-white"
               onClick={() => setSelectedEvent(null)}
             >
               ✕
             </button>
-            <h3 className="text-2xl font-bold text-white">
-              {selectedEvent.title}
-            </h3>
+
+            <h3 className="text-3xl font-bold">{selectedEvent.title}</h3>
             <p className="text-gray-400 mt-1">
               {new Date(selectedEvent.start).toLocaleString()} -{' '}
               {new Date(selectedEvent.end).toLocaleString()}
             </p>
-            <div className="mt-4 whitespace-pre-line text-neutral-300">
+
+            <div className="mt-4 whitespace-pre-line text-gray-300">
               {selectedEvent.description}
             </div>
 
@@ -142,7 +145,7 @@ export default function ScheduleSection() {
                     href={cta.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded text-white font-medium"
+                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white font-medium"
                   >
                     {cta.label}
                   </a>
